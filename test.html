@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My first HTML document</title>
+</head>
+
+<body>
+  <ul id="myList">
+    <li>Example one</li>
+    <li>Example two</li>
+    <li id="thirdelement">Example three</li>
+    <li>Example four</li>
+    <li>Example five</li>
+    <li>Example six</li>
+  </ul>
+<button type="button" id="meinButton">Ändere dich!</button>
+<script>
+var buttonElement = document.getElementById('meinButton');
+buttonElement.addEventListener('click', aendereListenEintrag);
+
+function aendereListenEintrag () {
+  var el = document.getElementById('thirdelement');
+  el.innerHTML = "<strong>Hallo Welt</strong>";
+  console.log("Der Eintrag wurde geändert");
+}
+</script>
+</body>
+</html>
